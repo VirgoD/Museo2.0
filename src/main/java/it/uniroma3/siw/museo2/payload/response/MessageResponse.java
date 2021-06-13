@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.payload.response;
+package it.uniroma3.siw.museo2.payload.response;
 
 public class MessageResponse {
 	private String message;

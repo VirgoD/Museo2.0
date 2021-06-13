@@ -1,9 +1,9 @@
-package it.uniroma3.siw.rentalev.repository;
+package it.uniroma3.siw.museo2.repository;
 
-import it.uniroma3.siw.rentalev.model.Role;
+import it.uniroma3.siw.museo2.model.Role;
 import org.springframework.data.repository.CrudRepository;
 
-import it.uniroma3.siw.rentalev.model.ERole;
+import it.uniroma3.siw.museo2.model.ERole;
 
 public interface RoleRepository extends CrudRepository<Role, Long>{
 

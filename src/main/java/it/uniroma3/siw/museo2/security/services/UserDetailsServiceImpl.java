@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.security.services;
+package it.uniroma3.siw.museo2.security.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import it.uniroma3.siw.rentalev.model.User;
-import it.uniroma3.siw.rentalev.service.UserService;
+import it.uniroma3.siw.museo2.model.User;
+import it.uniroma3.siw.museo2.service.UserService;
 
 
 @Service

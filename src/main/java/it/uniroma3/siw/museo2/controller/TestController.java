@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.controller;
+package it.uniroma3.siw.museo2.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;

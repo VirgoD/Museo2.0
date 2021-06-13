@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.controller;
+package it.uniroma3.siw.museo2.controller;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
-import it.uniroma3.siw.rentalev.model.Role;
+import it.uniroma3.siw.museo2.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,15 +20,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import it.uniroma3.siw.rentalev.model.ERole;
-import it.uniroma3.siw.rentalev.model.User;
-import it.uniroma3.siw.rentalev.payload.request.LoginRequest;
-import it.uniroma3.siw.rentalev.payload.request.SignupRequest;
-import it.uniroma3.siw.rentalev.payload.response.JwtResponse;
-import it.uniroma3.siw.rentalev.payload.response.MessageResponse;
-import it.uniroma3.siw.rentalev.security.jwt.JwtUtils;
-import it.uniroma3.siw.rentalev.security.services.UserDetailsImpl;
-import it.uniroma3.siw.rentalev.service.UserService;
+import it.uniroma3.siw.museo2.model.ERole;
+import it.uniroma3.siw.museo2.model.User;
+import it.uniroma3.siw.museo2.payload.request.LoginRequest;
+import it.uniroma3.siw.museo2.payload.request.SignupRequest;
+import it.uniroma3.siw.museo2.payload.response.JwtResponse;
+import it.uniroma3.siw.museo2.payload.response.MessageResponse;
+import it.uniroma3.siw.museo2.security.jwt.JwtUtils;
+import it.uniroma3.siw.museo2.security.services.UserDetailsImpl;
+import it.uniroma3.siw.museo2.service.UserService;
 
 
 

@@ -1,13 +1,13 @@
-package it.uniroma3.siw.rentalev.controller;
+package it.uniroma3.siw.museo2.controller;
 
 import javax.transaction.Transactional;
 
-import it.uniroma3.siw.rentalev.model.Role;
+import it.uniroma3.siw.museo2.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import it.uniroma3.siw.rentalev.model.ERole;
-import it.uniroma3.siw.rentalev.repository.RoleRepository;
+import it.uniroma3.siw.museo2.model.ERole;
+import it.uniroma3.siw.museo2.repository.RoleRepository;
 
 @Service
 public class RoleService {

@@ -1,17 +1,16 @@
-package it.uniroma3.siw.rentalev.security.jwt;
+package it.uniroma3.siw.museo2.security.jwt;
 
 
 import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 
 import io.jsonwebtoken.*;
-import it.uniroma3.siw.rentalev.security.services.UserDetailsImpl;
+import it.uniroma3.siw.museo2.security.services.UserDetailsImpl;
 
 @Component
 public class JwtUtils {

@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.model;
+package it.uniroma3.siw.museo2.model;
 
 import java.util.HashSet;
 import java.util.Set;

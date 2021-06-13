@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './view/Home.vue';
-import Login from './view/Login.vue';
-import Register from './view/Register.vue';
+import Home from './components/Home.vue';
+import Login from './components/Login.vue';
+import Register from './components/Register.vue';
 
 Vue.use(Router);
 
@@ -30,19 +30,19 @@ export const router = new Router({
       path: '/profile',
       name: 'profile',
       // lazy-loaded
-      component: () => import('./view/Profile.vue')
+      component: () => import('./components/Profile.vue')
     },
     {
       path: '/admin',
       name: 'admin',
       // lazy-loaded
-      component: () => import('./view/BoardAdmin.vue')
+      component: () => import('./components/BoardAdmin.vue')
     },
     {
       path: '/default',
       name: 'default',
       // lazy-loaded
-      component: () => import('./view/BoardDefault.vue')
+      component: () => import('./components/BoardDefault.vue')
     }
   ]
 });

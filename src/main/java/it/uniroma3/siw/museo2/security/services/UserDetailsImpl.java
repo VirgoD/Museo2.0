@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.security.services;
+package it.uniroma3.siw.museo2.security.services;
 
 
 
@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import it.uniroma3.siw.rentalev.model.User;
+import it.uniroma3.siw.museo2.model.User;
 
 public class UserDetailsImpl implements UserDetails {
 	private static final long serialVersionUID = 1L;

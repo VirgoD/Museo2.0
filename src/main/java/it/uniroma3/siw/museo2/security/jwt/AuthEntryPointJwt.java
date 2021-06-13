@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.security.jwt;
+package it.uniroma3.siw.museo2.security.jwt;
 
 import java.io.IOException;
 

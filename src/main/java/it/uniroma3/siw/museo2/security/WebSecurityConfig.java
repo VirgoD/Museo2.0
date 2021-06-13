@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.security;
+package it.uniroma3.siw.museo2.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,9 +13,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import it.uniroma3.siw.rentalev.security.jwt.AuthEntryPointJwt;
-import it.uniroma3.siw.rentalev.security.jwt.AuthTokenFilter;
-import it.uniroma3.siw.rentalev.security.services.UserDetailsServiceImpl;
+import it.uniroma3.siw.museo2.security.jwt.AuthEntryPointJwt;
+import it.uniroma3.siw.museo2.security.jwt.AuthTokenFilter;
+import it.uniroma3.siw.museo2.security.services.UserDetailsServiceImpl;
 
 
 

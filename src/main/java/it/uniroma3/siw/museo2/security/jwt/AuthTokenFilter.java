@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.security.jwt;
+package it.uniroma3.siw.museo2.security.jwt;
 
 import java.io.IOException;
 
@@ -17,7 +17,7 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import it.uniroma3.siw.rentalev.security.services.UserDetailsServiceImpl;
+import it.uniroma3.siw.museo2.security.services.UserDetailsServiceImpl;
 
 
 

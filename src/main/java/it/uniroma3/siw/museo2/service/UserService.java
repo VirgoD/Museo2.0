@@ -1,12 +1,12 @@
-package it.uniroma3.siw.rentalev.service;
+package it.uniroma3.siw.museo2.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import it.uniroma3.siw.rentalev.model.User;
-import it.uniroma3.siw.rentalev.repository.UserRepository;
+import it.uniroma3.siw.museo2.model.User;
+import it.uniroma3.siw.museo2.repository.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;

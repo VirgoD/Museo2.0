@@ -15,11 +15,11 @@
           <router-link to="/mod" class="nav-link">Partner Board</router-link>
         </li>
         <li class="nav-item">
-          <router-link v-if="defaultUser" to="/default" class="nav-link">User</router-link>
+          <router-link v-if="currentUser" to="/default" class="nav-link">User</router-link>
         </li>
       </div>
 
-      <div v-if="!defaultUser" class="navbar-nav ml-auto">
+      <div v-if="!currentUser" class="navbar-nav ml-auto">
         <li class="nav-item">
           <router-link to="/register" class="nav-link">
             <font-awesome-icon icon="user-plus" />Sign Up
@@ -32,11 +32,11 @@
         </li>
       </div>
 
-      <div v-if="defaultUser" class="navbar-nav ml-auto">
+      <div v-if="currentUser" class="navbar-nav ml-auto">
         <li class="nav-item">
           <router-link to="/profile" class="nav-link">
             <font-awesome-icon icon="user" />
-            {{ defaultUser.username }}
+            {{ currentUser.username }}
           </router-link>
         </li>
         <li class="nav-item">
@@ -56,12 +56,12 @@
 <script>
 export default {
   computed: {
-    defaultUser() {
+    currentUser() {
       return this.$store.state.auth.user;
     },
     showAdminBoard() {
-      if (this.defaultUser && this.currentUser.roles) {
-        return this.defaultUser.roles.includes('ROLE_ADMIN');
+      if (this.currentUser && this.currentUser.roles) {
+        return this.currentUser.roles.includes('ROLE_ADMIN');
       }
 
       return false;

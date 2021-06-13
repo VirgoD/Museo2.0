@@ -1,4 +1,4 @@
-package it.uniroma3.siw.rentalev.payload.request;
+package it.uniroma3.siw.museo2.payload.request;
 
 import java.util.Set;
 
