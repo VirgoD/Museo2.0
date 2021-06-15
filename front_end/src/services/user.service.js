@@ -1,7 +1,7 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = 'http://localhost:8080/api/test/';
+const API_URL = 'http://localhost:8080/api/v1/';
 
 class UserService {
   getPublicContent() {
@@ -10,6 +10,10 @@ class UserService {
 
   getDefaultBoard() {
     return axios.get(API_URL + 'default', { headers: authHeader() });
+  }
+
+  getDefaultArtisti(){
+    return axios.post(API_URL + 'addArtisti');
   }
 
   getAdminBoard() {
