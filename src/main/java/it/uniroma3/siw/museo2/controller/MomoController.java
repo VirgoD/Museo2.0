@@ -2,11 +2,13 @@ package it.uniroma3.siw.museo2.controller;
 
 import it.uniroma3.siw.museo2.model.User;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/v1")
 class MomoController {
 
