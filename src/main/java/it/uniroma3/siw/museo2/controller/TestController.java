@@ -16,16 +16,11 @@ public class TestController {
 	}
 	
 	@GetMapping("/customer")
-	@PreAuthorize("hasRole('CUSTOMER')")
+	@PreAuthorize("hasRole('DEFAULT')") //TODO modifica di prova
 	public String userAccess() {
 		return "User Content.";
 	}
 
-	@GetMapping("/mod")
-	@PreAuthorize("hasRole('PARTNER')")
-	public String moderatorAccess() {
-		return "Moderator Board.";
-	}
 
 	@GetMapping("/admin")
 	@PreAuthorize("hasRole('ADMIN')")

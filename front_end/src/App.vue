@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <a href class="navbar-brand" @click.prevent>Fox</a>
+      <a href class="navbar-brand" @click.prevent>MOMO</a>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">
           <router-link to="/home" class="nav-link">
@@ -16,6 +16,9 @@
         </li>
         <li class="nav-item">
           <router-link v-if="currentUser" to="/default" class="nav-link">User</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link v-if="currentUser" to="/artist" class="nav-link">Artist</router-link>
         </li>
       </div>
 
@@ -47,13 +50,17 @@
       </div>
     </nav>
 
+
     <div class="container">
       <router-view />
     </div>
   </div>
+
 </template>
 
 <script>
+
+
 export default {
   computed: {
     currentUser() {
@@ -67,7 +74,7 @@ export default {
       return false;
     },
   },
-  methods: {
+    methods: {
     logOut() {
       this.$store.dispatch('auth/logout');
       this.$router.push('/login');
