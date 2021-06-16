@@ -8,15 +8,12 @@
             <font-awesome-icon icon="home" />Home
           </router-link>
         </li>
-        <li v-if="showAdminBoard" class="nav-item">
+<!--        <li v-if="showAdminBoard" class="nav-item">
           <router-link to="/admin" class="nav-link">Admin Board</router-link>
         </li>
         <li v-if="showPartnerBoard" class="nav-item">
           <router-link to="/mod" class="nav-link">Partner Board</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link v-if="currentUser" to="/default" class="nav-link">User</router-link>
-        </li>
+        </li>-->
         <li class="nav-item">
           <router-link v-if="currentUser" to="/artist" class="nav-link">Artist</router-link>
         </li>

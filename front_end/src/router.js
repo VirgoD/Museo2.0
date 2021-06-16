@@ -41,12 +41,6 @@ export const router = new Router({
       component: () => import('./components/Profile.vue')
     },
     {
-      path: '/admin',
-      name: 'admin',
-      // lazy-loaded
-      component: () => import('./components/BoardAdmin.vue')
-    },
-    {
       path: '/default',
       name: 'default',
       // lazy-loaded
