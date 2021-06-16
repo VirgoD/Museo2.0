@@ -57,6 +57,16 @@ export const router = new Router({
       component: () => import('./components/AddArtist.vue')
     },
     {
+      path: '/addCollection',
+      name: 'addCollection',
+      component: () => import('./components/AddCollection.vue')
+    },
+    {
+      path: '/addOpera',
+      name: 'addOpera',
+      component: () => import('./components/AddOpera.vue')
+    },
+    {
       path: '/collection',
       name: 'collection',
       component: () => import('./components/Collection.vue')

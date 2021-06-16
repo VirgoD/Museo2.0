@@ -38,4 +38,15 @@ public class OperaService {
                 )).collect(Collectors.toList());
     }
 
+    public List<OperaDTO> addOpera(String titolo, Long anno, String descrizione, String artista) {
+        return this.operaRepository.addOpera(titolo, anno, descrizione,artista)
+                .stream()
+                .map(entry -> new OperaDTO(
+                        entry.getTitolo(),
+                        entry.getAnno(),
+                        entry.getDescrizione(),
+                        entry.getArtista()
+                )).collect(Collectors.toList());
+    }
+
 }

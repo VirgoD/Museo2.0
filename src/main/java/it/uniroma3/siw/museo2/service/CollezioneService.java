@@ -39,4 +39,14 @@ public class CollezioneService {
                 )).collect(Collectors.toList());
     }
 
+    public List<CollezioneDTO> addCollection(String titolo, Long anno, String descrizione, String curatoreId) {
+        return this.collezioneRepository.addCollection(titolo,anno,descrizione,curatoreId)
+                .stream()
+                .map(entry -> new CollezioneDTO(
+                        entry.getTitolo(),
+                        entry.getAnno(),
+                        entry.getDescrizione(),
+                        entry.getCuratore_Id()
+                )).collect(Collectors.toList());
+    }
 }

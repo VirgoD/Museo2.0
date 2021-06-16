@@ -1,5 +1,6 @@
 package it.uniroma3.siw.museo2.controller;
 
+import it.uniroma3.siw.museo2.dto.ArtistaDTO;
 import it.uniroma3.siw.museo2.dto.CollezioneDTO;
 import it.uniroma3.siw.museo2.service.CollezioneService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,4 +23,10 @@ public class CollezioneController {
     public List<CollezioneDTO> getSpecificaCollezione(@RequestParam String titolo){ return this.collezioneService
             .getCollezioneSpecifica(titolo); }
 
+    @GetMapping(path ="/addCollezione")
+    public  List<CollezioneDTO> addCollection(@RequestParam String titolo,
+                                                @RequestParam Long anno,
+                                                @RequestParam String descrizione,
+                                                @RequestParam String curatoreId)
+    {return this.collezioneService.addCollection(titolo,anno,descrizione,curatoreId); }
 }

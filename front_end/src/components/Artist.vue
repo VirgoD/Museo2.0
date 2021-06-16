@@ -18,13 +18,13 @@
     </div>
     <hr/>
 
-    <div class="container px-5">
+    <div class="">
       <div class=" row ">
         <div
             v-for="artist in artists"
             :key="artist.id"
         >
-          {{artist.nome}}    {{artist.id}}   {{artist.luogoNascita}}   {{artist.dataNascita}}    {{artist.luogoMorte}}        {{artist.dataMorte}}        {{artist.natzionalita}}
+          {{artist.id}}    {{artist.nome}}    {{artist.id}}   {{artist.luogoNascita}}   {{artist.dataNascita}}    {{artist.luogoMorte}}        {{artist.dataMorte}}        {{artist.natzionalita}}
 
         </div>
       </div>
