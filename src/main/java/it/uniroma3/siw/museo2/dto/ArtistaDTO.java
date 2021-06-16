@@ -3,17 +3,17 @@ package it.uniroma3.siw.museo2.dto;
 public class ArtistaDTO {
     String id;
     String nome;
-    String ltuogoNascita;
+    String luogoNascita;
     Long dataNascita;
     String luogoMorte;
     Long dataMorte;
     String natzionalita;
 
-    public ArtistaDTO(String id, String nome, String ltuogoNascita, Long dataNascita,
+    public ArtistaDTO(String id, String nome, String luogoNascita, Long dataNascita,
                       String luogoMorte, Long dataMorte, String natzionalita) {
         this.id = id;
         this.nome = nome;
-        this.ltuogoNascita = ltuogoNascita;
+        this.luogoNascita = luogoNascita;
         this.dataNascita = dataNascita;
         this.luogoMorte = luogoMorte;
         this.dataMorte = dataMorte;
@@ -28,8 +28,8 @@ public class ArtistaDTO {
         return nome;
     }
 
-    public String getLtuogoNascita() {
-        return ltuogoNascita;
+    public String getLuogoNascita() {
+        return luogoNascita;
     }
 
     public Long getDataNascita() {

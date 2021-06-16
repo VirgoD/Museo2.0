@@ -58,6 +58,26 @@ export const router = new Router({
       component: () => import('./components/Artist.vue')
     },
     {
+      path: '/addArtist',
+      name: 'addArtist',
+      component: () => import('./components/AddArtist.vue')
+    },
+    {
+      path: '/collection',
+      name: 'collection',
+      component: () => import('./components/Collection.vue')
+    },
+    {
+      path: '/opere',
+      name: 'opere',
+      component: () => import('./components/Opere.vue')
+    },
+    {
+      path: '/deleteArtist',
+      name: 'deleteArtist',
+      component: () => import('./components/DeleteArtist.vue')
+    },
+    {
       path: '/implicit/callback',
       component: Auth.handleCallback(),
     },
@@ -65,7 +85,7 @@ export const router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-  const publicPages = ['/login', '/register', '/home', '/artist'];
+  const publicPages = ['/login', '/register', '/home', '/artist', '/collection','/opere'];
   const authRequired = !publicPages.includes(to.path);
   const loggedIn = localStorage.getItem('user');
   Vue.prototype.$auth.authRedirectGuard();

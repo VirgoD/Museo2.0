@@ -12,10 +12,6 @@ class UserService {
     return axios.get(API_URL + 'default', { headers: authHeader() });
   }
 
-  getDefaultArtisti(){
-    return axios.post(API_URL + 'addArtisti');
-  }
-
   getAdminBoard() {
     return axios.get(API_URL + 'admin', { headers: authHeader() });
   }
