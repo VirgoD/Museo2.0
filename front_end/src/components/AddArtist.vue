@@ -37,6 +37,7 @@
 
 <script>
 import axios from "axios";
+import authHeader from "@/services/auth-header";
 
 export default {
   name: "AddArtist",
@@ -58,23 +59,21 @@ export default {
       const form = document.getElementById("insertArtist");
       const formData = new FormData(form);
       axios
-          .get("https://localhost:8080/api/v1/addArtist", {
+          .get("http://localhost:8080/api/v1/addArtista", {
             params: {
               id: formData.get('id'),
-              name: formData.get('nome'),
+              nome: formData.get('nome'),
               luogoNascita: formData.get('luogoNascita'),
               dataNascita: formData.get('dataNascita'),
               luogoMorte: formData.get('luogoMorte'),
               dataMorte: formData.get('dataMorte'),
-              natzionalita: formData.get('natzionalita'),
-
-            }
-          }) //TODO Append dei parametri da far passare
+              nazionalita: formData.get('nazionalita')
+            }, headers: authHeader()}) //TODO Append dei parametri da far passare
           .then((response) => {
             console.log(response);
           });
 
-      this.$router.push("/artist");
+      this.$router.push("/home");
 
       return false;
     }
