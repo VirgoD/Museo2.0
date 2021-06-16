@@ -47,7 +47,6 @@ export default {
       if (this.currentUser && this.currentUser.roles) {
         return this.currentUser.roles.includes('ROLE_ADMIN');
       }
-
       return false;
     },
   },
