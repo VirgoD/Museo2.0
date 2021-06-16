@@ -1,10 +1,12 @@
 package it.uniroma3.siw.museo2.service;
 
 import it.uniroma3.siw.museo2.dto.ArtistaDTO;
+import it.uniroma3.siw.museo2.model.Artista;
 import it.uniroma3.siw.museo2.repository.ArtistaRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
@@ -50,6 +52,20 @@ public class ArtistaService {
                                        Long dataNascita, String luogoMorte,
                                        Long dataMorte, String nazionalita) {
         return this.artistaRepository.addArtista(id,nome, luogoNascita, dataNascita, luogoMorte, dataMorte, nazionalita)
+                .stream()
+                .map(entry -> new ArtistaDTO(
+                        entry.getId(),
+                        entry.getNome(),
+                        entry.getLuogo_Nascita(),
+                        entry.getData_nascita(),
+                        entry.getNatzionalita(),
+                        entry.getData_morte(),
+                        entry.getLuogo_morte()
+                )).collect(Collectors.toList());
+    }
+
+    public List<ArtistaDTO> deleteArtista(String id) {
+        return this.artistaRepository.deleteArtista(id)
                 .stream()
                 .map(entry -> new ArtistaDTO(
                         entry.getId(),

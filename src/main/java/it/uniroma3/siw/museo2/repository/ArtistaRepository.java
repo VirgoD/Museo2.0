@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ArtistaRepository extends JpaRepository<Artista,String>, JpaSpecificationExecutor<Artista> {
 
@@ -26,4 +27,17 @@ public interface ArtistaRepository extends JpaRepository<Artista,String>, JpaSpe
                                              @Param("luogo_morte") String luogoMorte,
                                              @Param("data_morte") Long dataMorte,
                                              @Param("natzionalita") String nazionalita);
+
+    @Query(value = "DELETE FROM artisti.artista WHERE artista.id = :id ", nativeQuery = true)
+    public List<ArtistaInterface> deleteArtista(@Param("id") String id);
+
+    @Query(value = ")", nativeQuery = true)
+    public List<ArtistaInterface> modifyArtista(@Param("id") String id,
+                                             @Param("nome") String nome,
+                                             @Param("luogo_nascita") String luogoNascita,
+                                             @Param("data_nascita") Long dataNascita,
+                                             @Param("luogo_morte") String luogoMorte,
+                                             @Param("data_morte") Long dataMorte,
+                                             @Param("natzionalita") String nazionalita);
+
 }

@@ -1,9 +1,13 @@
 package it.uniroma3.siw.museo2.controller;
 
 import it.uniroma3.siw.museo2.dto.ArtistaDTO;
+import it.uniroma3.siw.museo2.entity.ArtistaInterface;
+import it.uniroma3.siw.museo2.model.Artista;
 import it.uniroma3.siw.museo2.service.ArtistaService;
 import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,4 +35,13 @@ public class ArtistaController {
                                         @RequestParam(required = false) Long dataMorte,
                                         @RequestParam String nazionalita)
     {return this.artistaService.addArtista(id,nome,luogoNascita, dataNascita, luogoMorte, dataMorte, nazionalita); }
+
+   /* @GetMapping(path ="/deleteArtista")
+    public List<ArtistaDTO> getDeleteArtista(@RequestParam String id){ return this.artistaService.getDeleteArtista(id); }
+*/
+    @DeleteMapping(value = "/deleteArtist")
+    public List<ArtistaDTO> deleteArtist(@RequestParam String id){
+        return this.artistaService.deleteArtista(id);
+    }
+
 }
